@@ -18,7 +18,7 @@ def func(pos_y, pos_x):
 
     print("This is the max angle that is acceptable!!: ", degree_angle_R, "or min angle that is acceptable: ", degree_angle_L)
 
-    # degree_angle1 is the degree that the gyroscope outputs
+    # degree_angle_gyro is the degree that the gyroscope outputs
     degree_angle_gyro = float(input("This is the gyro angle: "))
 
     # bounds for blink condition
