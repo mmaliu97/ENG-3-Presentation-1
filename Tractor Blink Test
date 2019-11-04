@@ -1,0 +1,33 @@
+import math
+
+
+def func(pos_y,pos_x):
+
+    #declaring blink
+    blink = False
+    
+    #declaring angle to be measured at particular point
+    theta = pos_x/pos_y
+    
+    #using trig functions
+    rad_angle = math.atan(theta)
+    
+    #converting into degrees (because gyroscope output is in degrees)
+    degree_angle = (rad_angle/math.pi) * 180
+   
+    print("This is the max angle that is acceptable!!: ", degree_angle)
+    
+    #degree_angle1 is the degree that the gyroscope outputs
+    degree_angle1 = float(input("Type in a number: "))
+    
+    #bounds for blink condition
+    if degree_angle <= degree_angle1 or math.fabs(pos_x) > 20.32:
+
+        blink = True
+        print (blink)
+
+    else:
+        print (blink)
+
+
+P = func(222,20.32)
